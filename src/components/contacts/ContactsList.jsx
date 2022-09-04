@@ -4,9 +4,6 @@ import ContactItem from './ContactItem';
 import propTypes from 'prop-types';
 
 export default function ContactsList({ deleteContact , items, filter}) {
-//  const items = useSelector(state => state.reducer.items);
-//  const filter = useSelector(state => state.reducer.filter);
-  console.log(items);
   return (
     <ul className={css.ContactList}>
       {filter === ''

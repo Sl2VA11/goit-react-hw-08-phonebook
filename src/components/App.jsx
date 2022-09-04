@@ -1,4 +1,4 @@
-import { React, useEffect, useState} from "react";
+import { React} from "react";
 import { Form } from "./contacts/ContactForm";
 import { nanoid } from "nanoid";
 import ContactsList from "./contacts/ContactsList";
@@ -10,9 +10,6 @@ import Notiflix from "notiflix";
 export function App() {
   const items = useSelector(state => state.reducer.items);
   const filter = useSelector(state => state.reducer.filter)
-  // const [contacts, setContacts] = useState(() => {
-  //   return JSON.parse(window.localStorage.getItem('contacts')) ;
-  // });
   const dispatch = useDispatch();
  
   const formSubmitHandler = (name, number) => {
@@ -51,15 +48,6 @@ export function App() {
   
 
   
-
-  // useEffect(() => {
-  //   window.localStorage.setItem('contacts', JSON.stringify(items));
-  // }, []);
-  
-
- 
- 
-  // const contacts = JSON.parse(window.localStorage.getItem('contacts'));
   
   return (
     <>
