@@ -1,0 +1,86 @@
+
+.formWrapper{
+  display: flex;
+}
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.textFieldFloating{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.textFieldFloating:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.textFieldInput {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: none;
+}
+
+.btnWrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.btn{
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(253, 193, 82);
+}
+.btn:hover,
+.btn:focus,
+.btnDelete:hover,
+.btnDelete:focus{
+background-color: rgb(181, 143, 72);
+}
+.ContactList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ContactTitle {
+  font-weight: 700;
+  font-size: 25px;
+  color:black;
+  text-align: center;
+}
+.ContactItem {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.userName{
+  font-weight: 500;
+  font-size: 25px;
+  color: rgb(42, 42, 42);
+  margin-right: 10px;
+}
+.btnDeleteWrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnDelete{
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(253, 193, 82);
+}
