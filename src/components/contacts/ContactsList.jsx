@@ -7,13 +7,13 @@ export default function ContactsList({ deleteContact , items, filter}) {
   return (
     <ul className={css.ContactList}>
       {filter === ''
-        ? items.map(({ id, name, number }) => {
+        ? items.map(({ id, name, phone }) => {
           return (
             <ContactItem
               key={id}
               id={id}
               name={name}
-              number={number}
+              phone={phone}
               deleteContact={deleteContact}
             />
           );
@@ -23,13 +23,13 @@ export default function ContactsList({ deleteContact , items, filter}) {
             .filter(contact =>
             contact.name.toLowerCase().includes(filter.toLowerCase())
           )
-            .map(({ id, name, number }) => {
+            .map(({ id, name, phone }) => {
               return (
                 <ContactItem
                   key={id}
                   id={id}
                   name={name}
-                  number={number}
+                  phone={phone}
                   deleteContact={deleteContact}
                 />
               );
