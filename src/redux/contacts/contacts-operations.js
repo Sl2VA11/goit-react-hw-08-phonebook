@@ -1,4 +1,4 @@
-import { applyMiddleware } from 'redux';
+
 import { getContacts, addContacts, removeContact } from '../../api/contactsApi';
 
 import actions from './contacts-actions';
