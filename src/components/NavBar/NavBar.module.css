@@ -1,0 +1,17 @@
+.navbar {
+ display: flex;
+  justify-content: center;
+  border-bottom: solid 1px black;
+  margin-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+ /* box-shadow: 5px 5px 5px 4px rgb(232, 164, 38); */
+}
+.navbarLinkWrapper{
+  display: flex;
+  align-items: center;
+}
+.authMenu{
+  margin-left: auto;
+}

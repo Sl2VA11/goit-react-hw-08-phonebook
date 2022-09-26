@@ -1,90 +1,40 @@
-import { React, useEffect} from "react";
-import { Form } from "./contacts/ContactForm";
-import { nanoid } from "nanoid";
-import ContactsList from "./contacts/ContactsList";
-import {useSelector, useDispatch} from 'react-redux'
-import Filter from "./Filter/Filter";
-import { fetchContacts, addContact, deleteContacts } from '../redux/contacts/contacts-operations';
-import { filterContacts } from "redux/filter/filter-actions";
-import Notiflix from "notiflix";
-import Loader from './Loader/Loader'
+import { React, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Contacts from './contacts/Contacts';
+import NavBar from './NavBar/NavBar';
+import Home from 'pages/Home/Home';
+import RegisterPage from 'pages/Register/RegisterPage';
+import { useDispatch, useSelector } from 'react-redux';
+import LoginPage from 'pages/Login/LoginPage';
+import Loader from './Loader/Loader';
+import PrivateRoutes from './PrivateRoutes/PrivateRoutes';
+import PublicRoutes from './PublicRoutes/PublicRoutes';
+import { current } from 'redux/auth/auth-operations';
 
 export function App() {
-  const items = useSelector(store => store.contacts.items);
-  const filter = useSelector(store => store.filter);
-  const loading = useSelector(store => store.contacts.loading);
+  const loadingContacts = useSelector(store => store.contacts.loading);
+  const authLoading = useSelector(state => state.auth.loading);
   const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(fetchContacts())
-  }, [dispatch])
+    dispatch(current());
+  }, [dispatch]);
 
-
-  const formSubmitHandler = (name, phone) => {
-    if (items.filter(contact => contact.name === name).length > 0) {
-      Notiflix.Notify.failure(`${name} is already in contacts`);
-      return;
-    }
-    const contact = {
-      id: nanoid(),
-      name,
-      phone,
-    };
-
-    dispatch(addContact(contact));
-  };
-
-  
-  
-  
-  const changeFilter = (e) => {
-    console.log(e.currentTarget.value)
-
-    dispatch(filterContacts(e.currentTarget.value));
-  }
-
-
-  const deleteContact = (contactId) => {
-    
-    dispatch(deleteContacts(contactId));
-    
-  };
-  
-
-  console.log(loading);
-  
-  
   return (
     <>
-      {loading === true && <Loader/>}
-      <h1 className="phonebook-title">Phonebook</h1>
-      <Form onSubmit={formSubmitHandler} />
-      <h2 className="phonebook-contact-title">Contact </h2>
-      <Filter onChange={changeFilter} value={filter} />
-      <p className="after-title">{items.length === 0 && 'No contacts'}</p>
-      {items.length > 0 && (
-        <ContactsList
-          filter={filter}
-          deleteContact={deleteContact}
-          items={items}
-        />
-      )}
+      <NavBar />
+      {loadingContacts || authLoading ? <Loader /> : null}
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route element={<PrivateRoutes />}>
+          <Route path="/contacts" element={<Contacts />} />
+        </Route>
+
+        <Route element={<PublicRoutes />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Route>
+      </Routes>
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

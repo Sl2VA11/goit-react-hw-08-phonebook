@@ -7,34 +7,32 @@ export default function ContactsList({ deleteContact , items, filter}) {
   return (
     <ul className={css.ContactList}>
       {filter === ''
-        ? items.map(({ id, name, phone }) => {
-          return (
-            <ContactItem
-              key={id}
-              id={id}
-              name={name}
-              phone={phone}
-              deleteContact={deleteContact}
-            />
-          );
-        })
-        : 
-          items
+        ? items.map(({ id, name, number }) => {
+            return (
+              <ContactItem
+                key={id}
+                id={id}
+                name={name}
+                number={number}
+                deleteContact={deleteContact}
+              />
+            );
+          })
+        : items
             .filter(contact =>
-            contact.name.toLowerCase().includes(filter.toLowerCase())
-          )
-            .map(({ id, name, phone }) => {
+              contact.name.toLowerCase().includes(filter.toLowerCase())
+            )
+            .map(({ id, name, number }) => {
               return (
                 <ContactItem
                   key={id}
                   id={id}
                   name={name}
-                  phone={phone}
+                  number={number}
                   deleteContact={deleteContact}
                 />
               );
-            })
-        }
+            })}
     </ul>
   );
 }

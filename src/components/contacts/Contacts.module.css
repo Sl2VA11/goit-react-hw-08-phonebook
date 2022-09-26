@@ -23,6 +23,8 @@
   border-radius: 10px;
   padding-left: 10px;
   border: none;
+  border: 1px solid rgb(76, 76, 201);
+  box-shadow:7px 5px 10px rgb(142, 142, 226) ;
 }
 
 .btnWrapper{
@@ -38,13 +40,14 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  background-color: rgb(253, 193, 82);
+  color: #fff;
+  background-color: rgb(76, 76, 201);
 }
 .btn:hover,
 .btn:focus,
 .btnDelete:hover,
 .btnDelete:focus{
-background-color: rgb(181, 143, 72);
+background-color: rgb(27, 27, 116);
 }
 .ContactList {
   display: flex;
@@ -82,5 +85,6 @@ background-color: rgb(181, 143, 72);
   font-size: 15px;
   border: none;
   cursor: pointer;
-  background-color: rgb(253, 193, 82);
+ color: #fff;
+  background-color: rgb(76, 76, 201);
 }

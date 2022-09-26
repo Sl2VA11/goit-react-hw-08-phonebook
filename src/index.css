@@ -2,10 +2,11 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 body {
   margin: 0;
-   background: #caca;
+  background: rgba(206, 206, 206, 0.667);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -17,22 +18,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.phonebook-title{
+.phonebook-title {
   font-weight: 900;
   font-family: 'Courier New', Courier, monospace;
   color: rgb(50, 50, 50);
   font-size: 35px;
   margin-bottom: 10px;
 }
-.phonebook-contact-title{
+.phonebook-contact-title {
   font-family: initial;
   font-weight: 900;
-    font-size: 35px;
+  font-size: 35px;
   text-align: center;
   color: rgb(50, 50, 50);
 }
 
-.after-title{
+.after-title {
   text-align: center;
   font-size: 20px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(76, 76, 201);
+  color: rgb(6, 6, 61);
+  font-size: 17px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-link {
+    font-size: 25px;
+  }
+}
+
+.navbar-link:not(:last-child){
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .navbar-link:not(:last-child) {
+    margin-right: 40px;
+  } 
+}
+
+
+.navbar-link.active {
+  font-weight: 700;
+  font-size: 15px;
+  color: rgb(76, 76, 201);
+  text-shadow: 7px 5px 10px rgb(142, 142, 226);
+}
+@media screen and (min-width: 768px) {
+  .navbar-link.active {
+    font-size: 30px;
+  }
+}
+
+.navbar-link:hover:not(.active),
+.navbar-link:focus-visible:not(.active) {
+  color: rgb(25, 44, 126);
 }

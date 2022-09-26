@@ -28,10 +28,12 @@ const contactsSlice = createSlice({
       store.error = null;
     },
     [addContact.fulfilled]: (store, { payload }) => {
+      console.log(payload);
       store.loading = false;
       store.items.push(payload);
     },
     [addContact.rejected]: (store, { payload }) => {
+      console.log(payload);
       store.loading = false;
       store.error = payload;
     },

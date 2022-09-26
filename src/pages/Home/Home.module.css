@@ -1,0 +1,11 @@
+.homeTitle{
+  font-weight: 900;
+  font-family: monospace;
+  color: rgb(50, 50, 50);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.imgText{
+   font-size: 25px;
+}
