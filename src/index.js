@@ -11,7 +11,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="contacts">
+    <BrowserRouter>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Container>
