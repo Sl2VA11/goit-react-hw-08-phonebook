@@ -6,8 +6,9 @@ export default function RegisterPage() {
    const dispatch = useDispatch();
    const isLoggedIn = useSelector(state => state.auth.isLogged);
    
-    const onSubmit = (name, email, password) => {
-      dispatch(register({ name, email, password }));
+  const onSubmit = user => {
+     
+      dispatch(register(user));
     };
    
    if (isLoggedIn === true) {

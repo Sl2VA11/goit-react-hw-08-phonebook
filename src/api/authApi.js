@@ -7,6 +7,7 @@ const instance = axios.create({
 
 
 export const userRegister = async registerCredentials => {
+  console.log(registerCredentials);
   const { data } = await instance.post('/users/signup', registerCredentials);
   instance.defaults.headers.common.authorization = `Bearer ${data.token}`;
 

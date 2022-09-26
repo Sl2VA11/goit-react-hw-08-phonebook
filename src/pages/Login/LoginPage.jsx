@@ -8,9 +8,9 @@ export default function LoginPage() {
    const dispatch = useDispatch();
    const isLoggedIn = useSelector(state => state.auth.isLogged);
    
-   const onSubmit = (email, password) => {
+   const onSubmit = (user) => {
      
-     dispatch(login({ email, password }));
+     dispatch(login(user));
    };
   
    if (isLoggedIn === true) {

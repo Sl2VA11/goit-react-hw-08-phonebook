@@ -3,34 +3,26 @@ import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 
 export default function Register({ onSubmit }) {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+   const [contact, setContact] = useState({
+     name: '',
+     email: '',
+     password: '',
+   });
+  
   const registerError = useSelector(state => state.auth.error);
   console.log(registerError);
 
   const onChange = e => {
     const { name, value } = e.target;
-    switch (name) {
-      case 'userName':
-        setName(value);
-        break;
-      case 'email':
-        setEmail(value);
-        break;
-      case 'password':
-        setPassword(value);
-        break;
 
-      default:
-        break;
-    }
+    setContact(prev => ({ ...prev, [name]: value }));
+    
   };
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    onSubmit( name, email, password );
+    onSubmit(contact);
     e.target.reset();
   };
 
@@ -45,7 +37,7 @@ export default function Register({ onSubmit }) {
               <Form.Control
                 type="name"
                 placeholder="Enter your name"
-                name="userName"
+                name="name"
                 size="lg"
                 onChange={onChange}
                 style={{ maxWidth: '300px' }}

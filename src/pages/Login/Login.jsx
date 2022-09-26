@@ -3,30 +3,23 @@ import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 
 export default function Login( {onSubmit} ) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [contact, setContact] = useState({
+    name: '',
+    email: '',
+  });
   const loginError = useSelector(state => state.auth.error);
+  
   const handleChange = e => {
     const { name, value } = e.target;
 
-    switch (name) {
-      case 'email':
-        setEmail(value);
-        break;
+    setContact(prev => ({ ...prev, [name]: value }));
 
-      case 'password':
-        setPassword(value);
-        break;
-
-      default:
-        break;
-    }
   };
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    onSubmit(email, password);
+    onSubmit(contact);
 
     e.target.reset();
   };

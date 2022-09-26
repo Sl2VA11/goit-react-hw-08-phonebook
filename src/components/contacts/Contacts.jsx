@@ -19,15 +19,12 @@ export default function Contacts() {
   const loading = useSelector(store => store.contacts.loading);
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
-  
-  
+
   useEffect(() => {
-   
     dispatch(fetchContacts());
-    
   }, [dispatch, isLoggedIn]);
 
-  const formSubmitHandler = (name, number) => {
+  const formSubmitHandler = ({ name, number }) => {
     if (items.filter(contact => contact.name === name).length > 0) {
       Notiflix.Notify.failure(`${name} is already in contacts`);
       return;
