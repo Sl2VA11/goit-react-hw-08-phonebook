@@ -1,7 +1,10 @@
+import Container from 'components/container/Container';
 import { useState } from 'react';
-import { Form, Button, Row, Col } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
 
+import { useSelector } from 'react-redux';
+// import css from './Login.module.css'
+import style from '../../css/signupForm.css';
+import css from './Login.module.css'
 export default function Login( {onSubmit} ) {
   const [contact, setContact] = useState({
     name: '',
@@ -25,49 +28,47 @@ export default function Login( {onSubmit} ) {
   };
 
   return (
-    <>
-      <Form onSubmit={handleSubmit}>
-        <Row>
-          <Col md>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email Address</Form.Label>
-              <Form.Control
-                type="email"
-                name="email"
-                placeholder="Enter email"
-                size="lg"
-                onChange={handleChange}
-                style={{ maxWidth: '300px' }}
-              />
-            </Form.Group>
-          </Col>
-
-          <Col md className="mb-3 ">
-            <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                size="lg"
-                type="password"
-                name="password"
-                onChange={handleChange}
-                placeholder="Password"
-                style={{ maxWidth: '300px' }}
-              />
-            </Form.Group>
-          </Col>
-        </Row>
-        {loginError !== null && (
-          <div className="">
-            <p
-              style={{ color: 'red', fontSize: 25 }}>
-              {loginError.statusText}
-            </p>
+    <div className={css.loginSection}>
+      <Container>
+        <div className='textWrapper'>
+          <h1 className='title'>Welcome back</h1>
+          <p className='text'>
+            Start a productive journey <br /> starts right here
+          </p>
+        </div>
+        <form onSubmit={handleSubmit} className='form'>
+          <div className='inputWrapper'>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email "
+              onChange={handleChange}
+              className='input'
+            />
           </div>
-        )}
-        <Button variant="primary" type="submit">
-          Login
-        </Button>
-      </Form>
-    </>
+
+          <div className='inputWrapper'>
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              placeholder="Password"
+              className='input'
+            />
+            <button type="submit" className='btn'>
+              Login
+            </button>
+          </div>
+
+          {/* {loginError !== null && (
+            <div className="">
+              <p style={{ color: 'red', fontSize: 25 }}>
+                {loginError.statusText}
+              </p>
+            </div>
+          )} */}
+        </form>
+      </Container>
+    </div>
   );
 }

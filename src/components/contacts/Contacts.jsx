@@ -34,7 +34,7 @@ export default function Contacts() {
       name,
       number,
     };
-    console.log(contact);
+    
     dispatch(addContact(contact));
   };
 
@@ -48,12 +48,12 @@ export default function Contacts() {
     dispatch(deleteContacts(contactId));
   };
 
-  console.log(loading);
+ 
 
   return (
     <>
       {loading === true && <Loader />}
-      <h1 className="phonebook-title">Phonebook</h1>
+      
       <Form onSubmit={formSubmitHandler} />
       <h2 className="phonebook-contact-title">Contact </h2>
       <Filter onChange={changeFilter} value={filter} />

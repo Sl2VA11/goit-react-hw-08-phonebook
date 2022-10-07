@@ -1,0 +1,87 @@
+.footerWrapper {
+  
+  
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(66, 25, 96);
+
+ /* height: 100%; */
+}
+
+@media screen and (min-width: 768px) {
+  .footerWrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footerInfoWrapp {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footerInfoWrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+.footerSubTitle {
+    color: white;
+  }
+@media screen and (max-width: 768px) {
+  .footerSubTitle {
+    margin-bottom: 10px;
+  }
+}
+
+.iconList {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+   .iconList {
+  margin-bottom: 40px;
+}
+}
+.iconItem:not(:last-child) {
+  margin-right: 20px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon:hover,
+.icon:focus {
+  width: 50px;
+  height: 50px;
+}
+.mail {
+  fill: rgb(236, 160, 67);
+}
+.mail:hover,
+.mail:focus {
+  fill: rgb(164, 113, 50);
+}
+.github {
+  fill: black;
+}
+.github:hover,
+.github:focus {
+  fill: rgb(29, 27, 27);
+}
+.footerTitleWrapp {
+  background-color: aliceblue;
+  /* padding: 2px; */
+  padding-top: 3px;
+  border-radius: 7px;
+  text-align: center;
+}
+.footerTitle {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}

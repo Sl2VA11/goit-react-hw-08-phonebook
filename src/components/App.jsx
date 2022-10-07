@@ -10,10 +10,12 @@ import Loader from './Loader/Loader';
 import PrivateRoutes from './PrivateRoutes/PrivateRoutes';
 import PublicRoutes from './PublicRoutes/PublicRoutes';
 import { current } from 'redux/auth/auth-operations';
-
+import Footer from './Footer/Footer';
+// import ModalFindOut from './ModalFindOut/ModalFindOut';
 export function App() {
   const loadingContacts = useSelector(store => store.contacts.loading);
   const authLoading = useSelector(state => state.auth.loading);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(current());
@@ -35,6 +37,7 @@ export function App() {
           <Route path="/register" element={<RegisterPage />} />
         </Route>
       </Routes>
+      <Footer />    
     </>
   );
 }

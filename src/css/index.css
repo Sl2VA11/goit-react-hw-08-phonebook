@@ -1,29 +1,39 @@
-@import-normalize; /* bring in normalize.css styles */
-* {
+
+*,h3,ul,ol,html,body,form,h1,p {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style: none;
 }
+
 body {
-  margin: 0;
-  background: rgba(206, 206, 206, 0.667);
+   /* margin-bottom: 60px; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(320deg, rgb(119, 183, 239) 14%, rgba(137,133,199,1) 65%)
+}
+
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .phonebook-title {
   font-weight: 900;
+  
   font-family: 'Courier New', Courier, monospace;
-  color: rgb(50, 50, 50);
+  color: rgb(60, 148, 255);
   font-size: 35px;
   margin-bottom: 10px;
+  
 }
 .phonebook-contact-title {
   font-family: initial;
@@ -41,8 +51,7 @@ code {
 .navbar-link {
   text-decoration: none;
   cursor: pointer;
-  color: rgb(76, 76, 201);
-  color: rgb(6, 6, 61);
+  color: white;
   font-size: 17px;
 
 }
@@ -68,8 +77,8 @@ code {
 .navbar-link.active {
   font-weight: 700;
   font-size: 15px;
-  color: rgb(76, 76, 201);
-  text-shadow: 7px 5px 10px rgb(142, 142, 226);
+  color: rgb(103, 185, 248);
+  text-shadow: 10px 5px 10px rgb(16, 16, 25);
 }
 @media screen and (min-width: 768px) {
   .navbar-link.active {

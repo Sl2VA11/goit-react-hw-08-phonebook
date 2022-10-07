@@ -14,7 +14,7 @@ export default function LoginPage() {
    };
   
    if (isLoggedIn === true) {
-       console.log(isLoggedIn);
+      
       return <Navigate to='/contacts'/>;
     }
    return (

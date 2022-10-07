@@ -1,22 +1,22 @@
+import Container from 'components/container/Container';
 import { useState } from 'react';
-import { Form, Button, Row, Col } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
 
+import { useSelector } from 'react-redux';
+import css from './Register.module.css';
+import style from '../../css/signupForm.css'
 export default function Register({ onSubmit }) {
-   const [contact, setContact] = useState({
-     name: '',
-     email: '',
-     password: '',
-   });
-  
+  const [contact, setContact] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+
   const registerError = useSelector(state => state.auth.error);
-  console.log(registerError);
 
   const onChange = e => {
     const { name, value } = e.target;
 
     setContact(prev => ({ ...prev, [name]: value }));
-    
   };
 
   const handleSubmit = e => {
@@ -27,9 +27,62 @@ export default function Register({ onSubmit }) {
   };
 
   return (
-    <>
-      <h1 className="phonebook-title">Registration page</h1>
-      <Form onSubmit={handleSubmit}>
+    <div className={css.registerSection}>
+      <Container>
+        <div className='textWrapper'>
+          <h1 className='title'>We welcome you</h1>
+          <p className='text'>
+            Enter your personal details and <br /> get started right away
+          </p>
+        </div>
+
+        <form action="" className='form' onSubmit={handleSubmit}>
+          <div className='inputWrapper'>
+            <input
+              type="name"
+              placeholder="Enter your name"
+              name="name"
+              onChange={onChange}
+              className='input'
+            />
+          </div>
+          <div className='inputWrapper'>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              onChange={onChange}
+              className='input'
+            />
+          </div>
+          <div className='inputWrapper'>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              name="password"
+              onChange={onChange}
+              className='input'
+            />
+            <button type="submit" className='btn' >
+              Register
+            </button>
+          </div>
+        </form>
+        {/* {registerError !== null && registerError.status !== 401 ? (
+          <div>
+            <p style={{ color: 'red', fontSize: 25 }}>
+              {registerError.statusText}
+            </p>
+          </div>
+        ) : null}
+
+        {registerError !== null && registerError.status === 401 ? (
+          <div>
+            <p style={{ color: 'red', fontSize: 25 }}>Authorisate please</p>
+          </div>
+        ) : null} */}
+      </Container>
+      {/* <Form onSubmit={handleSubmit}>
         <Row>
           <Col md>
             <Form.Group controlId="formBasicName">
@@ -71,24 +124,9 @@ export default function Register({ onSubmit }) {
               />
             </Form.Group>
           </Col>
-        </Row>
-        {registerError !== null && registerError.status !== 401 ? (
-          <div>
-            <p style={{ color: 'red', fontSize: 25 }}>
-              {registerError.statusText}
-            </p>
-          </div>
-        ) : null}
+        </Row> */}
 
-        {registerError !== null && registerError.status === 401 ? (
-          <div>
-            <p style={{ color: 'red', fontSize: 25 }}>Authorisate please</p>
-          </div>
-        ) : null}
-        <Button variant="primary" type="submit">
-          Register
-        </Button>
-      </Form>
-    </>
+      {/* </Form> */}
+    </div>
   );
 }
