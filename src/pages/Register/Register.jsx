@@ -1,9 +1,9 @@
 import Container from 'components/container/Container';
 import { useState } from 'react';
 
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import css from './Register.module.css';
-import style from '../../css/signupForm.css'
+
 export default function Register({ onSubmit }) {
   const [contact, setContact] = useState({
     name: '',
@@ -11,7 +11,7 @@ export default function Register({ onSubmit }) {
     password: '',
   });
 
-  const registerError = useSelector(state => state.auth.error);
+  // const registerError = useSelector(state => state.auth.error);
 
   const onChange = e => {
     const { name, value } = e.target;
@@ -29,7 +29,7 @@ export default function Register({ onSubmit }) {
   return (
     <div className={css.registerSection}>
       <Container>
-        <div className='textWrapper'>
+        <div className='text-wrapper'>
           <h1 className='title'>We welcome you</h1>
           <p className='text'>
             Enter your personal details and <br /> get started right away
@@ -37,7 +37,7 @@ export default function Register({ onSubmit }) {
         </div>
 
         <form action="" className='form' onSubmit={handleSubmit}>
-          <div className='inputWrapper'>
+          <div className='input-wrapper'>
             <input
               type="name"
               placeholder="Enter your name"
@@ -46,7 +46,7 @@ export default function Register({ onSubmit }) {
               className='input'
             />
           </div>
-          <div className='inputWrapper'>
+          <div className='input-wrapper'>
             <input
               type="email"
               placeholder="Enter your email"
@@ -55,7 +55,7 @@ export default function Register({ onSubmit }) {
               className='input'
             />
           </div>
-          <div className='inputWrapper'>
+          <div className='input-wrapper'>
             <input
               type="password"
               placeholder="Enter your password"

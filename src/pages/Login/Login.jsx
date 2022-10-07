@@ -1,16 +1,15 @@
 import Container from 'components/container/Container';
 import { useState } from 'react';
 
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 // import css from './Login.module.css'
-import style from '../../css/signupForm.css';
 import css from './Login.module.css'
 export default function Login( {onSubmit} ) {
   const [contact, setContact] = useState({
     name: '',
     email: '',
   });
-  const loginError = useSelector(state => state.auth.error);
+  // const loginError = useSelector(state => state.auth.error);
   
   const handleChange = e => {
     const { name, value } = e.target;
@@ -30,14 +29,14 @@ export default function Login( {onSubmit} ) {
   return (
     <div className={css.loginSection}>
       <Container>
-        <div className='textWrapper'>
+        <div className='text-wrapper'>
           <h1 className='title'>Welcome back</h1>
           <p className='text'>
             Start a productive journey <br /> starts right here
           </p>
         </div>
         <form onSubmit={handleSubmit} className='form'>
-          <div className='inputWrapper'>
+          <div className='input-wrapper'>
             <input
               type="email"
               name="email"
@@ -47,7 +46,7 @@ export default function Login( {onSubmit} ) {
             />
           </div>
 
-          <div className='inputWrapper'>
+          <div className='input-wrapper'>
             <input
               type="password"
               name="password"
