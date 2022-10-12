@@ -1,5 +1,4 @@
 import { React, useEffect, useState } from 'react';
-// import { ContactForm } from '../../components/ModalAddContacts/ContactForm';
 import { nanoid } from 'nanoid';
 import ContactsList from './ContactsList/ContactsList';
 import { useSelector, useDispatch } from 'react-redux';
