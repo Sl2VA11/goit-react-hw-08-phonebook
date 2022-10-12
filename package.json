@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://sl2va11.github.io/phonebook/",
   "dependencies": {
+    "@dropzone-ui/react": "^6.7.20",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",

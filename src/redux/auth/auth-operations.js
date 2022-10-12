@@ -32,7 +32,8 @@ export const login = createAsyncThunk(
     } catch ({ response }) {
       console.log(response);
 
-      const {status, statusText} = response;
+      const { status, statusText } = response;
+      
       const error = {
         status,
         statusText,
@@ -65,10 +66,11 @@ export const current = createAsyncThunk(
     } catch ({ response }) {
       console.log(response);
 
-      const { status, statusText } = response;
+      const { status, statusText,data } = response;
       const error = {
         status,
         statusText,
+        data: data.message,
       };
 
       return rejectWithValue(error);

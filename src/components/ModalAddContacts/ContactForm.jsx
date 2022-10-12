@@ -1,18 +1,17 @@
 import { useState } from 'react';
-import css from './Contacts.module.css';
+import css from './ModalAddContacts.module.css';
 import propTypes from 'prop-types';
 
-export function Form({ onSubmit }) {
+export function ContactForm({ onSubmit, setModalShow }) {
   const [contact, setContact] = useState({
     name: '',
     number: '',
   });
-  
+
   const handleChange = e => {
     const { name, value } = e.currentTarget;
-    
-    setContact((prev) => ({ ...prev, [name]: value }))
-    
+
+    setContact(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = e => {
@@ -54,7 +53,11 @@ export function Form({ onSubmit }) {
           />
         </div>
         <div className={css.btnWrapper}>
-          <button type="submit" className={css.btn}>
+          <button
+            type="submit"
+            className={css.btn}
+            onClick={() => setModalShow(false)}
+          >
             Add Contact
           </button>
         </div>
@@ -63,6 +66,6 @@ export function Form({ onSubmit }) {
   );
 }
 
-Form.propTypes = {
+ContactForm.propTypes = {
   onSubmit: propTypes.func,
 };

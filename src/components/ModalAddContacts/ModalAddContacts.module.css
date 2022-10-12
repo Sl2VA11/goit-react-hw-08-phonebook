@@ -1,0 +1,64 @@
+.modal{
+   padding: 40px;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .form {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+.textFieldFloating {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+.textFieldFloating:not(:last-child) {
+  margin-bottom: 20px;
+}
+.textFieldInput {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: none;
+  border: 1px solid rgb(76, 76, 201);
+  box-shadow: 7px 5px 10px rgb(142, 142, 226);
+}
+@media screen and (min-width: 768px){
+  .textFieldInput {
+  width: 60vh;
+  height: 40px;
+ 
+}
+}
+
+
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.btn {
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(76, 76, 201);
+}
+.btn:hover,
+.btn:focus,
+.btnDelete:hover,
+.btnDelete:focus {
+  background-color: rgb(27, 27, 116);
+}

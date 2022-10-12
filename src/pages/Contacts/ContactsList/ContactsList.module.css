@@ -1,0 +1,103 @@
+.ContactTitle {
+  font-weight: 700;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+}
+.ContactList {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.ContactItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #0000;
+  box-shadow: 0 1px 2px 0 rgba(220, 138, 6, 0.5),
+    0 0px 4px 3px rgb(60 64 80 / 52%);
+}
+.ContactItem:not(:last-child) {
+  margin-bottom: 30px;
+}
+.btnToogleWrapp {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btnNarrow {
+  border: none;
+  border-bottom-left-radius: 10px;
+  background-color: rgb(153, 127, 255);
+  transform: rotate(180deg);
+
+  transition: all 0.3s;
+}
+.btnNarrow:hover {
+  transform: rotate(0deg);
+  border-top-right-radius: 10px;
+  background-color: rgb(77, 41, 218);
+}
+
+.narrowIcon {
+  width: 35px;
+  height: 35px;
+  color: rgb(255, 255, 255);
+}
+
+.openBlock {
+  display: block;
+}
+.hideBlock {
+  display: none;
+}
+
+.userInfoWrapp {
+  display: flex;
+  align-items: baseline;
+}
+
+.userIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.userName {
+  font-weight: 500;
+  font-size: 17px;
+  color: rgb(42, 42, 42);
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .userName {
+    font-size: 25px;
+  }
+}
+.btnDeleteWrap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnDelete {
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(76, 76, 201);
+}

@@ -1,4 +1,4 @@
-import css from './Contacts.module.css';
+import css from './ContactsList.module.css';
 import React from 'react';
 import ContactItem from './ContactItem';
 import propTypes from 'prop-types';

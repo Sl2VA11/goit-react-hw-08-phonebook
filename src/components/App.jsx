@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Contacts from './contacts/Contacts';
+import Contacts from '../pages/Contacts/ContactsPage';
 import NavBar from './NavBar/NavBar';
 import Home from 'pages/Home/Home';
 import RegisterPage from 'pages/Register/RegisterPage';
@@ -11,7 +11,6 @@ import PrivateRoutes from './PrivateRoutes/PrivateRoutes';
 import PublicRoutes from './PublicRoutes/PublicRoutes';
 import { current } from 'redux/auth/auth-operations';
 import Footer from './Footer/Footer';
-// import ModalFindOut from './ModalFindOut/ModalFindOut';
 export function App() {
   const loadingContacts = useSelector(store => store.contacts.loading);
   const authLoading = useSelector(state => state.auth.loading);
@@ -37,7 +36,7 @@ export function App() {
           <Route path="/register" element={<RegisterPage />} />
         </Route>
       </Routes>
-      <Footer />    
+      <Footer />
     </>
   );
 }

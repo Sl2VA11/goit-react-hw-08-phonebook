@@ -1,0 +1,136 @@
+.contactSection {
+  position: relative;
+  
+  padding-top: 150px;
+  padding-bottom: 100%;
+ background: url(../../images/bg-preview.png) left bottom no-repeat;
+  background-size:  230px; 
+ 
+}
+.withoutContacts{
+  background: url(../../images/bg-preview.png) left bottom no-repeat;
+   background-size:  230px; 
+  padding-bottom: 100%;
+}
+
+@media screen and (min-width: 768px){
+  .contactSection {
+  position: relative;
+  
+  padding-top: 150px;
+  padding-bottom: 18%;
+ background: url(../../images/bg-preview.png) left bottom no-repeat, url(../../images/minion.png) right 70px top no-repeat;
+  background-size:  330px; 
+ 
+}
+  .withoutContacts{
+   background: url(../../images/bg-preview.png) left bottom no-repeat, url(../../images/minion.png) right 70px top no-repeat;
+   
+   background-size:  330px; 
+  padding-bottom: 62%;
+}
+.withoutContacts .openModalBtn{
+  right: 3%;
+  bottom: 20%;
+}
+.addContactIcon {
+  width: 60px;
+  height: 60px;
+
+  
+}
+}
+.noContactsText{
+  
+  text-align: center;
+  font-size: 35px;
+  color: rgb(103, 185, 248);
+  text-shadow: 10px 5px 10px rgb(16, 16, 25);
+}
+.openModalBtn {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+  background-color: rgb(231, 229, 229);
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.withoutContacts .openModalBtn{
+  right: 3%;
+  bottom: 33%;
+}
+.addContactIcon {
+  width: 40px;
+  height: 40px;
+
+  fill: rgb(26, 66, 143);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.openModalBtn:hover,
+.openModalBtn:focus {
+  background-color: rgb(255, 252, 252);
+}
+.openModalBtn:hover .addContactIcon,
+.openModalBtn:focus .addContactIcon {
+  fill: rgb(161, 83, 210);
+}
+
+.ContactTitle {
+  font-weight: 700;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+}
+.ContactList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+}
+
+.ContactItem {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 30px;
+  text-align: center;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #0000;
+}
+@media screen and (min-width: 768px) {
+  .ContactItem {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+
+
+}
+.userName {
+  font-weight: 500;
+  font-size: 25px;
+  color: rgb(42, 42, 42);
+  margin-right: 10px;
+}
+.btnDeleteWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnDelete {
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(76, 76, 201);
+}

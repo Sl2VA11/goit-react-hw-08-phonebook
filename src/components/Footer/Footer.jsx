@@ -1,4 +1,4 @@
-import Container from 'components/container/Container';
+import Container from 'components/Container/Container';
 import css from './Footer.module.css';
 import { FaLinkedin, FaMailBulk, FaGithub, FaTelegram } from 'react-icons/fa';
 // AiFillLinkedin;

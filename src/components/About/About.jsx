@@ -1,5 +1,5 @@
 import css from './About.module.css'
-import Container from 'components/container/Container'
+import Container from 'components/Container/Container'
 export default function About() {
    return (
      <div className={css.about}>

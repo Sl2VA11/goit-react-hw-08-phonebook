@@ -4,17 +4,18 @@ import propTypes from 'prop-types';
 export default function Filter({ value, onChange }) {
   
   return (
-    <>
-      <label className={css.label}>Filter</label>
+    <div className={css.filterWrapper}>
+      {/* <label className={css.label}>Search  */}
       <input
         className={css.input}
         type="text"
         name="filter"
         value={value}
         onChange={onChange}
-        placeholder="You can filter your contact"
+        placeholder="Search "
       />
-    </>
+      {/* </label> */}
+    </div>
   );
 }
 
