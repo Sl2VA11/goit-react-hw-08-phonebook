@@ -1,4 +1,4 @@
-import Container from 'components/Container/Container';
+// import Container from 'components/Container/Container';
 import css from './Footer.module.css';
 import { FaLinkedin, FaMailBulk, FaGithub, FaTelegram } from 'react-icons/fa';
 // AiFillLinkedin;
@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer>
       <div className={css.footerWrapper}>
-        <Container>
+        {/* <Container> */}
           <div className={css.footerInfoWrapp}>
           <h3 className={css.footerSubTitle}>Сontact us</h3>
           
@@ -59,7 +59,7 @@ export default function Footer() {
               <h3 className="phonebook-title">Phonebook</h3>
             </div>
           </div>
-        </Container>
+        {/* </Container> */}
       </div>
     </footer>
       
