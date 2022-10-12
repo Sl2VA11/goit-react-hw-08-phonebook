@@ -2,7 +2,8 @@ import UserMenu from 'components/UserMenu/UserMenu';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import css from './NavBar.module.css';
-import Container from 'components/Container/Container';
+import Container from '../Container/Container';
+
 export default function NavBar() {
   const isLoggedIn = useSelector(state => state.auth.isLogged);
 
