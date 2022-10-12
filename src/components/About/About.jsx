@@ -1,9 +1,8 @@
 import css from './About.module.css'
-import Container from 'components/Container/Container'
 export default function About() {
    return (
      <div className={css.about}>
-       <Container>
+       <div className="container">
          <h2 className={css.aboutTitle}>Why us?</h2>
          <ul className={css.aboutList}>
            <li className={css.aboutItem}>
@@ -47,7 +46,7 @@ export default function About() {
              </p>
            </li>
          </ul>
-       </Container>
+       </div>
      </div>
    );
 }

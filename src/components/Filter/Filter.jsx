@@ -5,7 +5,7 @@ export default function Filter({ value, onChange }) {
   
   return (
     <div className={css.filterWrapper}>
-      {/* <label className={css.label}>Search  */}
+      
       <input
         className={css.input}
         type="text"
@@ -14,7 +14,7 @@ export default function Filter({ value, onChange }) {
         onChange={onChange}
         placeholder="Search "
       />
-      {/* </label> */}
+     
     </div>
   );
 }

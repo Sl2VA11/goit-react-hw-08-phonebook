@@ -1,4 +1,3 @@
-import Container from 'components/Container/Container';
 import { useState } from 'react';
 
 import { useSelector } from 'react-redux';
@@ -34,7 +33,7 @@ export default function Register({ onSubmit }) {
 
   return (
     <div className={css.registerSection}>
-      <Container>
+      <div className="container">
         <div className="text-wrapper">
           <h1 className="title">We welcome you</h1>
           <p className="text">
@@ -87,7 +86,7 @@ export default function Register({ onSubmit }) {
             <p style={{ color: 'red', fontSize: 25 }}>Authorisate please</p>
           </div>
         ) : null} */}
-      </Container>
+      </div>
     </div>
   );
 }

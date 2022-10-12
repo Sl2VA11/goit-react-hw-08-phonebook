@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer>
       <div className={css.footerWrapper}>
-        {/* <Container> */}
+        <div className="container">
           <div className={css.footerInfoWrapp}>
           <h3 className={css.footerSubTitle}>Сontact us</h3>
           
@@ -59,7 +59,7 @@ export default function Footer() {
               <h3 className="phonebook-title">Phonebook</h3>
             </div>
           </div>
-        {/* </Container> */}
+        </div>
       </div>
     </footer>
       
