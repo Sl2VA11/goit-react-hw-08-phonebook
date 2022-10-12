@@ -12,6 +12,7 @@ export default function NavBar() {
     <header>
       <nav className={css.navbar}>
         <Container>
+          
           <div className={css.navbarLinkWrapper}>
             <NavLink to="/" className="navbar-link">
               Home
