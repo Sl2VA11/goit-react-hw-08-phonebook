@@ -1,4 +1,4 @@
-import Container from 'components/Container/Container';
+// import Container from 'components/Container/Container';
 import UserMenu from 'components/UserMenu/UserMenu';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -11,8 +11,8 @@ export default function NavBar() {
   return (
     <header>
       <nav className={css.navbar}>
-        <Container>
-          
+        {/* <Container> */}
+
           <div className={css.navbarLinkWrapper}>
             <NavLink to="/" className="navbar-link">
               Home
@@ -37,7 +37,7 @@ export default function NavBar() {
               </div>
             )}
           </div>
-        </Container>
+        {/* </Container> */}
       </nav>
     </header>
   );
